@@ -33,4 +33,8 @@ public class Encrypt {
         }
         return true;
     }
+
+    public boolean isInRange() {
+        return this.key >= 1 && this.key <= 25;
+    }
 }

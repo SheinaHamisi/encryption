@@ -9,5 +9,9 @@ class EncryptTest {
         assertEquals(true, value.isString());
     }
 
-
+    @Test
+    public void checkInput_checksIfKeyIsBetween1to25() {
+        Encrypt value = new Encrypt("z", 25);
+        assertEquals(true, value.isInRange());
+    }
 }
