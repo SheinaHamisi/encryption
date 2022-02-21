@@ -32,4 +32,6 @@ class EncryptTest {
         Encrypt newEncryption = new Encrypt("ABC", 1);
         assertEquals("BCD", newEncryption.forward());
     }
+
+
 }
