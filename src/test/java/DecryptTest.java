@@ -14,4 +14,10 @@ class DecryptTest {
         Decrypt newDecryption = new Decrypt("bcd", 1);
         assertEquals("abc", newDecryption.backward());
     }
+
+    @Test
+    public void decryptsUpperCaseMultipleCharacterWords() {
+        Decrypt newDecryption = new Decrypt("BCD", 1);
+        assertEquals("ABC", newDecryption.backward());
+    }
 }
