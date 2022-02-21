@@ -37,4 +37,24 @@ public class Encrypt {
     public boolean isInRange() {
         return this.key >= 1 && this.key <= 25;
     }
+
+    public String forward() {
+        char[] newCharText = message.toCharArray();
+
+        for (int i = 0; i < newCharText.length; i++){
+            //        For uppercase letters
+            if (Character.isUpperCase(newCharText[i])){
+                int castText = ((int) newCharText[i] - 65 + this.key) % 26 + 65;
+                newCharText[i] = (char)castText;
+            }
+            //        For lowercase letters
+            else if (Character.isLowerCase(newCharText[i])){
+                int castText = ((int) newCharText[i] - 97 + this.key) % 26 + 97;
+                newCharText[i] = (char)castText;
+            }
+        }
+
+        final String newS = String.valueOf(newCharText);
+        return newS;
+    }
 }

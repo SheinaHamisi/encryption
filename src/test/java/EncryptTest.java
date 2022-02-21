@@ -14,4 +14,10 @@ class EncryptTest {
         Encrypt value = new Encrypt("z", 25);
         assertEquals(true, value.isInRange());
     }
+
+    @Test
+    public void Encrypt_EncryptsSingleLowerCaseCharacters() {
+        Encrypt newEncryption = new Encrypt("z", 1);
+        assertEquals("a", newEncryption.forward());
+    }
 }
